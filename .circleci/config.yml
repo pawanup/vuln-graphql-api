@@ -25,11 +25,11 @@ jobs:
           name: "Semgrep scan"
           command: semgrep-agent
   snyk-scan:
+    working_directory: app/
     docker:
       - image: 'cimg/node:lts'
     steps:
       - checkout
-      - run: cd app
       - run: npm install -q
       - snyk/scan
   trufflehog-scan:
