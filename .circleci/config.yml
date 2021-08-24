@@ -30,6 +30,7 @@ jobs:
     steps:
       - checkout
       - run: cd app
+      - run: npm install -q
       - snyk/scan
   trufflehog-scan:
     docker:
