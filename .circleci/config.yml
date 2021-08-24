@@ -25,7 +25,7 @@ jobs:
           name: "Semgrep scan"
           command: semgrep-agent
   snyk-scan:
-    working_directory: $CIRCLE_WORKING_DIRECTORY/app/
+    working_directory: ~/app
     docker:
       - image: 'cimg/node:lts'
     steps:
