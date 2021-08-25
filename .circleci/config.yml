@@ -33,7 +33,7 @@ jobs:
       - run: 
           name: "npm-install"
           command: |
-            npm init
+            npm init -y
             npm install sqlite3
             npm install -q
       - snyk/scan
