@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
-    "sequelize": "sequelize"
+    "sequelize": "sequelize",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@types/bluebird": "^3.5.26",
@@ -30,6 +32,8 @@
     "sequelize-cli": "^5.5.1",
     "sqlite": "^3.0.3",
     "sqlite3": "^4.1.1",
-    "typescript": "^3.4.5"
-  }
+    "typescript": "^3.4.5",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
